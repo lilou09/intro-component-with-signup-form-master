@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+  --red: hsl(0, 100%, 74%);
+  --green: hsl(154, 59%, 51%);
+
+  --blue: hsl(248, 32%, 49%);
+
+  --darkBlue: hsl(249, 10%, 26%);
+  --grayishBlue: hsl(246, 25%, 77%);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  background: url(./images/bg-intro-desktop.png) no-repeat;
+  background-size: cover;
+  background-color: hsl(0, 100%, 74%);
+}
+
+article {
+  max-width: 100%;
+  width: 50%;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 0 160px;
+}
+.title_subtitle {
+  color: white;
+  padding-right: 30px;
+}
+
+.title_subtitle h1 {
+  font-size: 45px;
+  line-height: 1.3;
+  margin-bottom: 30px;
+}
+
+.title_subtitle p {
+  line-height: 1.4;
+  opacity: 0.9;
+}
+
+article button.try {
+  font-family: inherit;
+  font-size: 16px;
+  width: 90%;
+  padding: 10px 30px;
+  background-color: var(--blue);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  margin-bottom: 20px;
+}
+
+article button.try span {
+  font-weight: 700;
+}
+
+form {
+  width: 90%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 35px;
+  border-radius: 8px;
+}
+form div {
+  display: flex;
+  flex-direction: column;
+}
+
+form input,
+form button {
+  padding: 15px 23px;
+  margin-bottom: 18px;
+  border-radius: 10px;
+  border: 1px solid var(--grayishBlue);
+  font-weight: 600;
+}
+
+form button {
+  text-transform: uppercase;
+  background-color: var(--green);
+  color: white;
+  font-size: 16px;
+}
+form p {
+  font-size: 10px;
+  color: var(--grayishBlue);
+}
+form p span {
+  color: var(--red);
+  font-weight: 700;
+}
+input:focus,
+button:focus {
+  outline: none;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.error {
+  border: 2px solid var(--red);
+  background: url(./images/icon-error.svg) no-repeat;
+  background-position: 95% 50%;
+}
+
+.error-text {
+  font-size: 12px;
+  margin-left: auto;
+  margin-top: -15px;
+  margin-bottom: 20px;
+  color: var(--red);
+}
+.succes {
+  border: 2px solid var(--green);
+}
+
+@media (max-width: 768px) {
+  body {
+    background: url(./images/bg-intro-mobile.png) no-repeat cover;
+    background-color: var(--red);
+  }
+  .container {
+    padding: 20px 40px;
+    display: flex;
+    flex-direction: column;
+  }
+  article {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .title_subtitle {
+    text-align: center;
+    padding: 40px 0 60px;
+  }
+  .title_subtitle h1 {
+    font-size: 40px;
+  }
+  form {
+    text-align: center;
+  }
+
+  article button.try {
+    padding: 15px 50px;
+  }
+}
